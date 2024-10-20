@@ -1,7 +1,7 @@
-from api_client import client
-from config import AGENT_ROLES, DEFAULT_MODEL
-from logger import setup_logger
-from config import LOG_FILE, LOG_LEVEL
+from dudoxx_swarm_starter.api_client import client
+from dudoxx_swarm_starter.config import AGENT_ROLES, DEFAULT_MODEL
+from dudoxx_swarm_starter.logger import setup_logger
+from dudoxx_swarm_starter.config import LOG_FILE, LOG_LEVEL
 
 logger = setup_logger(LOG_FILE, LOG_LEVEL)
 

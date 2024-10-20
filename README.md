@@ -21,17 +21,20 @@ Dudoxx Swarm Starter is a project that orchestrates agents using routines and ha
    pip install -r requirements.txt
    ```
 
-4. Set up your OpenAI API key as an environment variable:
+4. Create a `.env` file in the project root directory with the following content:
    ```
-   export OPENAI_API_KEY='your-api-key-here'
+   OPENAI_API_KEY=your-api-key-here
+   OPENAI_BASE_URL=https://api.openai.com/v1
+   OPENAI_MODEL=gpt-4
    ```
+   Replace `your-api-key-here` with your actual OpenAI API key.
 
 ## Usage
 
 To run the Dudoxx Swarm Starter:
 
 ```
-python main.py
+python -m dudoxx_swarm_starter
 ```
 
 Follow the on-screen prompts to interact with the agents. You can switch between different agent roles by typing 'switch' during the conversation.
@@ -55,6 +58,9 @@ dudoxx_swarm_starter/
 ├── config.py
 ├── logger.py
 ├── main.py
+├── __init__.py
+├── __main__.py
+├── .env
 ├── requirements.txt
 └── tests/
     ├── test_agents.py
@@ -67,6 +73,9 @@ dudoxx_swarm_starter/
 - `config.py`: Contains configuration variables for the project.
 - `logger.py`: Sets up logging for the application.
 - `main.py`: The main entry point for the application.
+- `__init__.py`: Makes the directory a Python package.
+- `__main__.py`: Allows the package to be run as a script.
+- `.env`: Contains environment variables (not tracked by git).
 - `tests/`: Contains unit tests for the project.
 
 ## Contributing
